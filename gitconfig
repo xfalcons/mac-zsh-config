@@ -9,8 +9,8 @@
     branchdiff = !sh -c \"git diff `git oldest-ancestor`..\"
     branchlog = !sh -c \"git log `git oldest-ancestor`..\"
     diverges = !zsh -c 'git rev-list --boundary $1...$2 | grep ^- | cut -c2-'
-    merge = merge --no-ff
-    pull = pull --no-ff --rebase
+    # merge = merge --no-ff
+    # pull = pull --rebase
     oneline = log --pretty=oneline
     logdate = log --pretty=format:'%ad %h %aN %s';echo
     la = log --pretty=\"format:%ad %h (%an): %s \" --date=short
@@ -46,6 +46,10 @@
 
 [merge]
     tool = araxismerge
+    ff = false
+
+[pull]
+    ff = only
 
 [mergetool "araxismerge"]
     cmd = "/usr/bin/compare -3 -merge -wait $LOCAL $BASE $REMOTE $MERGED"
@@ -58,13 +62,15 @@
         default = tracking
 [user]
 	name = Kevin Luo
-	email = kevin_luo@miiicasa.com
+	email = kevin.luo@linecorp.com
 [core]
-	excludesfile = $HOME/.gitignore_global
-	editor = vim
+	excludesfile = /Users/kevin.luo/.gitignore_global
+    editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[commit]
+	template = /Users/kevin.luo/.stCommitMsg

@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/kevin.luo/.oh-my-zsh
@@ -83,3 +83,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+setopt no_share_history
+export PATH=./:$PATH:$HOME/bin
+
+## added by Anaconda3 4.2.0 installer
+#export PATH="/anaconda/bin:$PATH"
+
+# Java Home
+export JAVA_HOME=$(/usr/libexec/java_home)
