@@ -2,13 +2,13 @@ Installation
 ======
 On my MBP or Ubuntu, I love using Oh My ZSH in my terminal to use with GIT. This works faster than GIT UI programs like Tower. First of all you need to install ZSH and afterwards install Oh My ZSH. The minimum zsh version required for Oh My ZSH is 4.3.9
 
-Install ZSH first:
+Install BREW first:
 ------
-Git is required. If you don’t have git installed you can download it from this location http://git-scm.com/downloads
 
-	git clone git://zsh.git.sf.net/gitroot/zsh/zsh
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-or on MBP
+Install ZSH:
+------
 
 	brew install zsh
 
