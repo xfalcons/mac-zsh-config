@@ -62,4 +62,4 @@ Backup your original configuration files if necessary.
      
 Install everything with one-line command.
 
-     wget -O - https://raw.github.com/xfalcons/mac-config/master/install.sh | sh
+     wget -O - https://raw.github.com/xfalcons/mac-zsh-config/master/install.sh | sh
