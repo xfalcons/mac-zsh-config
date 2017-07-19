@@ -12,10 +12,11 @@ die() {
 
 [ -e $CONFIG_HOME ] && die "$CONFIG_HOME already exists."
 
-git clone git@github.com:xfalcons/bash-git-prompt.git .bash-git-prompt
-git clone git@github.com:xfalcons/mac-zsh-config.git "$CONFIG_HOME"
-
 cd ~
+
+git clone git@github.com:xfalcons/bash-git-prompt.git .bash-git-prompt
+git clone git@github.com:xfalcons/mac-zsh-config.git .mac-zsh-config
+
 [ ! -d "bin" ] && mkdir -p bin
 [ ! -d "mac-zsh-config.bak" ] && mkdir -p mac-zsh-config.bak
 
@@ -24,7 +25,7 @@ for f in $target_files
 do
     if [ -e $f ]
     then
-        mv $f mac-config.bak/
+        mv $f mac-zsh-config.bak/
         echo "Move $f to mac-zsh-config.bak/"
     fi
 done
