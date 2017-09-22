@@ -46,7 +46,7 @@
 
 [merge]
     tool = araxismerge
-    ff = false
+    #ff = only
 
 [pull]
     ff = only

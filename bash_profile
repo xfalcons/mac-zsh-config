@@ -56,3 +56,6 @@ else
     eval `ssh-agent | tee ~/.agent.env`
     ssh-add
 fi
+
+# added by Anaconda3 4.4.0 installer
+export PATH="/Users/kevin.luo/anaconda/bin:$PATH"

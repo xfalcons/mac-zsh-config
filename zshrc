@@ -85,10 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 setopt no_share_history
-export PATH=./:$PATH:$HOME/bin
-
-## added by Anaconda3 4.2.0 installer
-#export PATH="/anaconda/bin:$PATH"
 
 # Java Home
 export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=./:$PATH:$HOME/bin:JAVA_HOME/bin:$HOME/anaconda/bin:$PATH
