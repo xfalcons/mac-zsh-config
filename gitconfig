@@ -21,6 +21,7 @@
 
 [pager]
     diff =
+    branch = false
 
 [color]
     diff = auto
@@ -47,6 +48,7 @@
 [merge]
     tool = araxismerge
     #ff = only
+    commit = no
 
 [pull]
     ff = only
@@ -66,6 +68,7 @@
 [core]
 	excludesfile = /Users/kevin.luo/.gitignore_global
     editor = vim
+	autocrlf = input
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

@@ -4,7 +4,7 @@ export ARCHFLAGS="-arch x86_64"
 # Setup JAVA_HOME on MAC
 if [ -e "/usr/libexec/java_home" ] 
 then
-    `/usr/libexec/java_home`
+    JAVA_HOME=`/usr/libexec/java_home`
     if [ $? -ne 0 ]; then
         echo "You need to install Java SDK to setup your JAVA_HOME"
     else
@@ -57,5 +57,36 @@ else
     ssh-add
 fi
 
-# added by Anaconda3 4.4.0 installer
-export PATH="/Users/kevin.luo/anaconda/bin:$PATH"
+export GOPATH="/usr/local/opt/go"
+
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
+# added by Anaconda3 5.3.0 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/kevin.luo/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/Users/kevin.luo/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/kevin.luo/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/Users/kevin.luo/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<

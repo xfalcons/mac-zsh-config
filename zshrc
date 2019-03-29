@@ -83,9 +83,19 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ga="git add ."
+alias gcmsg="git commit -m "
 
 setopt no_share_history
 
+# Go Home
+export GOPATH=/usr/local/opt/go
+
 # Java Home
 export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=./:$PATH:$HOME/bin:JAVA_HOME/bin:$HOME/anaconda/bin:$PATH
+export PATH=./:$PATH:$HOME/bin:JAVA_HOME/bin:$HOME/anaconda3/bin:$GOPATH/bin:$HOME/fabric/fabric-samples/bin
+
+BROWSER=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+export BROWSER
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
