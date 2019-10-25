@@ -97,5 +97,5 @@ export PATH=./:$PATH:$HOME/bin:JAVA_HOME/bin:$HOME/anaconda3/bin:$GOPATH/bin:$HO
 
 BROWSER=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 export BROWSER
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$PATH:/usr/local/opt/mysql-client/bin"
 eval "$(rbenv init -)"

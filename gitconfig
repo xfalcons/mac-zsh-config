@@ -64,7 +64,7 @@
         default = tracking
 [user]
 	name = Kevin Luo
-	email = kevin.luo@linecorp.com
+	email = xfalcons@gmail.com
 [core]
 	excludesfile = /Users/kevin.luo/.gitignore_global
     editor = vim
@@ -73,7 +73,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
 	template = /Users/kevin.luo/.stCommitMsg
