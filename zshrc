@@ -89,7 +89,7 @@ alias gcmsg="git commit -m "
 setopt no_share_history
 
 # Go Home
-export GOPATH=/usr/local/opt/go
+export GOPATH=$HOME/dev/go
 
 # Java Home
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -98,4 +98,19 @@ export PATH=./:$PATH:$HOME/bin:JAVA_HOME/bin:$HOME/anaconda3/bin:$GOPATH/bin:$HO
 BROWSER=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 export BROWSER
 export PATH="$PATH:/usr/local/opt/mysql-client/bin"
-eval "$(rbenv init -)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/kevin.luo/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/kevin.luo/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/kevin.luo/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/kevin.luo/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
