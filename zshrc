@@ -97,7 +97,7 @@ export PATH=./:$PATH:$HOME/bin:JAVA_HOME/bin:$HOME/anaconda3/bin:$GOPATH/bin:$HO
 
 BROWSER=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 export BROWSER
-export PATH="$PATH:/usr/local/opt/mysql-client/bin"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH:/usr/local/opt/node@8/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -114,3 +114,15 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:/usr/local/opt/ruby/bin:$PATH"
+
+# For compilers to find ruby you may need to set:
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
+# For pkg-config to find ruby you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
