@@ -93,29 +93,35 @@ export GOPATH=$HOME/dev/go
 
 # Java Home
 export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=./:$PATH:$HOME/bin:JAVA_HOME/bin:$HOME/anaconda3/bin:$GOPATH/bin:$HOME/fabric/fabric-samples/bin
+export PATH=./:$PATH:$HOME/bin:$JAVA_HOME/bin:$GOPATH/bin:$HOME/fabric/fabric-samples/bin
 
 BROWSER=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 export BROWSER
-export PATH="/usr/local/opt/mysql-client/bin:$PATH:/usr/local/opt/node@8/bin:$PATH"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/kevin.luo/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/kevin.luo/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/kevin.luo/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/kevin.luo/anaconda3/bin:$PATH"
+        export PATH="$PATH:/opt/anaconda3/bin"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Python virtual env, auto activate
+# The python autoenv
+if [ -f "$HOME/.bashrc" ]; then
+    . $HOME/.bashrc
+fi
+source `which activate`
 
-export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:/usr/local/opt/ruby/bin:$PATH"
+export PATH="$PATH:/usr/local/lib/ruby/gems/2.6.0/bin:/usr/local/opt/ruby/bin"
 
 # For compilers to find ruby you may need to set:
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
