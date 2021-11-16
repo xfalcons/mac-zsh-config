@@ -144,3 +144,6 @@ export PATH="/Users/kevin.luo/.local/bin:$PATH"
 eval "$(fnm env)"
 fpath+=~/.config/zsh/completions/_fnm
 compinit
+
+# For Solana
+export PATH="/Users/$HOME/.cargo/bin:/Users/$HOME/.local/share/solana/install/active_release/bin:$PATH"
