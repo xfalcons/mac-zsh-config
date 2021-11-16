@@ -139,3 +139,6 @@ PS1='$(kube_ps1)'$PS1
 
 # For k9s
 export PATH="/Users/kevin.luo/.local/bin:$PATH"
+
+# For fnm
+eval "$(fnm env)"
