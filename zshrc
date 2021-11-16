@@ -142,3 +142,5 @@ export PATH="/Users/kevin.luo/.local/bin:$PATH"
 
 # For fnm
 eval "$(fnm env)"
+fpath+=~/.config/zsh/completions/_fnm
+compinit
