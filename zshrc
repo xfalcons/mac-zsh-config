@@ -89,7 +89,8 @@ alias gcmsg="git commit -m "
 setopt no_share_history
 
 # Go Home
-export GOPATH=$HOME/dev/go
+export GOPATH=$HOME/dev/line/golang
+export PATH=$PATH:$GOPATH/bin
 
 # Java Home
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -119,7 +120,7 @@ unset __conda_setup
 if [ -f "$HOME/.bashrc" ]; then
     . $HOME/.bashrc
 fi
-source `which activate`
+source `which activate.sh`
 
 export PATH="$PATH:/usr/local/lib/ruby/gems/2.6.0/bin:/usr/local/opt/ruby/bin"
 
@@ -132,3 +133,9 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# For k9s
+export PATH="/Users/kevin.luo/.local/bin:$PATH"
