@@ -93,43 +93,18 @@ export GOPATH=$HOME/dev/line/golang
 export PATH=$PATH:$GOPATH/bin
 
 # Java Home
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(/usr/libexec/java_home -v '1.8.0_332')
 export PATH=./:$PATH:$HOME/bin:$JAVA_HOME/bin:$GOPATH/bin:$HOME/fabric/fabric-samples/bin
 
 BROWSER=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 export BROWSER
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="$PATH:/opt/anaconda3/bin"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 # Python virtual env, auto activate
 # The python autoenv
 if [ -f "$HOME/.bashrc" ]; then
     . $HOME/.bashrc
 fi
-source `which activate.sh`
-
-export PATH="$PATH:/usr/local/lib/ruby/gems/2.6.0/bin:/usr/local/opt/ruby/bin"
-
-# For compilers to find ruby you may need to set:
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
-
-# For pkg-config to find ruby you may need to set:
-export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
@@ -147,3 +122,8 @@ compinit
 
 # For Solana
 export PATH="/Users/$HOME/.cargo/bin:/Users/$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+# For NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
